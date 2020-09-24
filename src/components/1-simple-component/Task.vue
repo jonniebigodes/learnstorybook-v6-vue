@@ -2,7 +2,7 @@
 
 <template>
   <div class="list-item">
-    <input type="text" :readonly="true" :value="this.task.title" />
+    <input type="text" readonly :value="task.title" />
   </div>
 </template>
 

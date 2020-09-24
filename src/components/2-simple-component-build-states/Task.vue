@@ -3,19 +3,14 @@
 <template>
   <div class="list-item" :class="task.state">
     <label class="checkbox">
-      <input
-        type="checkbox"
-        :checked="isChecked"
-        :disabled="true"
-        name="checked"
-      />
+      <input type="checkbox" :checked="isChecked" disabled name="checked" />
       <span class="checkbox-custom" @click="$emit('archive-task', task.id)" />
     </label>
     <div class="title">
       <input
         type="text"
         :value="task.title"
-        :readonly="true"
+        readonly
         placeholder="Input title"
       />
     </div>
