@@ -3,14 +3,14 @@
 import Task from "./Task";
 
 export default {
-  title: "Task",
+  title: "1: Simple Component/Task",
   component: Task
 };
 
 const Template = (args, { argTypes }) => ({
   components: { Task },
   props: Object.keys(argTypes),
-  template: '<Task v-bind="$props" />'
+  template: '<Task :task="task" />'
 });
 
 export const Default = Template.bind({});

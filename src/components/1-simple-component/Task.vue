@@ -8,12 +8,12 @@
 
 <script>
 export default {
-  name: "task",
+  name: "Task",
   props: {
     task: {
       type: Object,
       required: true,
-      default: () => ({})
+      default: () => ({ id: "", state: "", title: "" })
     }
   }
 };
