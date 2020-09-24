@@ -35,7 +35,8 @@ export default {
     task: {
       type: Object,
       required: true,
-      default: () => ({ id: "", state: "", title: "" })
+      default: () => ({ id: "", state: "", title: "" }),
+      validator: task => ["id", "state", "title"].every(key => key in task)
     }
   },
   computed: {
