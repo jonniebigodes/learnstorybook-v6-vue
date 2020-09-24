@@ -1,6 +1,7 @@
 // src/components/Task.stories.js
 
 import Task from "./Task";
+import { action } from "@storybook/addon-actions";
 
 export default {
   title: "1: Simple Component/Task",
@@ -10,7 +11,12 @@ export default {
 const Template = (args, { argTypes }) => ({
   components: { Task },
   props: Object.keys(argTypes),
-  template: '<Task :task="task" />'
+  methods: {
+    onPinTask: action("on-pin-task"),
+    onArchiveTask: action("on-archive-task")
+  },
+  template:
+    '<Task :task="task" @pin-task="onPinTask" @archive-task="onArchiveTask" />'
 });
 
 export const Default = Template.bind({});
