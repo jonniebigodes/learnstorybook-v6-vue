@@ -5,7 +5,7 @@ import * as TaskStories from "./Task.stories";
 
 export default {
   component: TaskList,
-  title: "2: Simple Component - Build out the States/TaskList",
+  title: "2: Task States/TaskList",
   decorators: [() => '<div style="padding: 3rem;"><story /></div>']
 };
 

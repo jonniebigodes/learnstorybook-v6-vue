@@ -4,7 +4,7 @@ import Task from "./Task";
 import { action } from "@storybook/addon-actions";
 
 export default {
-  title: "2: Simple Component - Build out the States/Task",
+  title: "2: Task States/Task",
   component: Task,
   // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/
