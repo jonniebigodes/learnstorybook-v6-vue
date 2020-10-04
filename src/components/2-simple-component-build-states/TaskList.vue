@@ -20,8 +20,8 @@ export default {
   components: { Task },
 
   props: {
-    loading: { type: Boolean, default: false },
-    tasks: { type: Array, default: () => [] }
+    tasks: { type: Array, required: true, default: () => [] },
+    loading: { type: Boolean, default: false }
   },
 
   computed: {
