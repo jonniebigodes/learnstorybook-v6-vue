@@ -5,16 +5,20 @@ import { action } from "@storybook/addon-actions";
 
 export default {
   title: "1: Simple Component/Task",
-  component: Task
+  component: Task,
+  // Our exports that end in "Data" are not stories.
+  excludeStories: /.*Data$/
+};
+
+export const actionsData = {
+  onPinTask: action("pin-task"),
+  onArchiveTask: action("archive-task")
 };
 
 const Template = (args, { argTypes }) => ({
   components: { Task },
   props: Object.keys(argTypes),
-  methods: {
-    onPinTask: action("on-pin-task"),
-    onArchiveTask: action("on-archive-task")
-  },
+  methods: actionsData,
   template:
     '<Task :task="task" @pin-task="onPinTask" @archive-task="onArchiveTask" />'
 });
