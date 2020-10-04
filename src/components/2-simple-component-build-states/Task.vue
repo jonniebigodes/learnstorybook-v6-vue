@@ -16,7 +16,7 @@
     </div>
 
     <div class="actions">
-      <a v-if="!isArchived" @click="$emit('pin-task', task.state)">
+      <a v-if="!isChecked" @click="$emit('pin-task', task.state)">
         <span class="icon-star" />
       </a>
     </div>
@@ -36,9 +36,6 @@ export default {
   },
   computed: {
     isChecked() {
-      return this.task.state === "TASK_ARCHIVED";
-    },
-    isArchived() {
       return this.task.state === "TASK_ARCHIVED";
     }
   }
