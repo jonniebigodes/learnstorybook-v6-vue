@@ -9,12 +9,8 @@ import { mapState, mapActions } from "vuex";
 export default {
   components: { PureTaskList },
 
-  methods: {
-    ...mapActions(["archiveTask", "pinTask"])
-  },
+  methods: mapActions(["archiveTask", "pinTask"]),
 
-  computed: {
-    ...mapState(["tasks"])
-  }
+  computed: mapState(["tasks"])
 };
 </script>
