@@ -1,5 +1,10 @@
 <template>
-  <PureTaskList :tasks="tasks" v-on="$listeners" />
+  <PureTaskList
+    :tasks="tasks"
+    v-on="$listeners"
+    @archive-task="archiveTask"
+    @pin-task="pinTask"
+  />
 </template>
 
 <script>
