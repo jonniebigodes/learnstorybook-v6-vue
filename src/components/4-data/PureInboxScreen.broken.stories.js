@@ -12,7 +12,7 @@ const Template = (args, { argTypes }) => ({
   template: '<PureInboxScreen v-bind="$props" />'
 });
 
-export const Default = Template.bind({});
-
-export const Error = Template.bind({});
-Error.args = { error: true };
+// export const Default = Template.bind({});
+//
+// export const Error = Template.bind({});
+// Error.args = { error: true };
