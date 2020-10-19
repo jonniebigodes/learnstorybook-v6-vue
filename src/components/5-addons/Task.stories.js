@@ -4,7 +4,7 @@ import Task from "./Task";
 import { action } from "@storybook/addon-actions";
 
 export default {
-  title: "2: Task States/Task",
+  title: "5: Addons/Task",
   component: Task,
   // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/
@@ -20,7 +20,7 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   methods: actionsData,
   template:
-    '<Task v-bind="$props" @pin-task="onPinTask" @archive-task="onArchiveTask" />'
+    '<Task :task="task" @pin-task="onPinTask" @archive-task="onArchiveTask" />'
 });
 
 export const Default = Template.bind({});
@@ -46,5 +46,15 @@ Archived.args = {
   task: {
     ...Default.args.task,
     state: "TASK_ARCHIVED"
+  }
+};
+
+const longTitleString = `This task's name is absurdly large. In fact, I think if I keep going I might end up with content overflow. What will happen? The star that represents a pinned task could have text overlapping. The text could cut-off abruptly when it reaches the star. I hope not!`;
+
+export const LongTitle = Template.bind({});
+LongTitle.args = {
+  task: {
+    ...Default.args.task,
+    title: longTitleString
   }
 };
